@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import {Route, Routes, useLocation} from "react-router-dom";
-import {Calculate, Diagrams, FilterCalculate, Info} from "./components";
+import {Calculate, Diagrams, FilterCalculate, Info} from "./pages";
+import {Navbar} from "./components";
 
 const App = () => {
     const {pathname} = useLocation();
@@ -9,12 +10,15 @@ const App = () => {
     }, [pathname]);
 
     return (
-        <Routes>
-            <Route path='/' element={<Calculate/>}/>
-            <Route path='/info' element={<Info/>}/>
-            <Route path='/filter-calculate' element={<FilterCalculate/>}/>
-            <Route path='/diagrams' element={<Diagrams/>}/>
-        </Routes>
+        <>
+            <Navbar />
+            <Routes>
+                <Route path='/' element={<FilterCalculate/>}/>
+                <Route path='/calculate' element={<Calculate/>}/>
+                <Route path='/info' element={<Info/>}/>
+                <Route path='/diagrams' element={<Diagrams/>}/>
+            </Routes>
+        </>
     )
 }
 export default App

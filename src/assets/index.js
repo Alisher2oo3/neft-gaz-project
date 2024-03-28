@@ -1,0 +1,8 @@
+export {default as gallery_1} from './gallery1.jpg'
+export {default as gallery_2} from './gallery2.jpg'
+export {default as gallery_3} from './gallery3.jfif'
+export {default as gallery_4} from './gallery4.webp'
+export {default as first_main} from './mainImg.jpg'
+export {default as two_main} from './main2.jpg'
+export {default as yongin} from './yonishImg.jpeg'
+export {default as korxona} from './korxonaimg.jpg'
