@@ -21,11 +21,14 @@ const Navbar = () => {
                         Dashboard
                     </span>
                 </Link>
-                <button className={style.openBtn} onClick={openNav}><CgMenuLeft className={`text-[1.5rem]`} /></button>
+                <button className={style.openBtn} onClick={openNav}>
+                    <CgMenuLeft className={`text-[1.5rem]`} />
+                </button>
                 <div className={`${toggleNav ? 'fixed top-16' : 'hidden'} w-full md:block md:w-auto`}>
                     <ul className={style.ul}>
                         <li><Link to={`/calculate`} className={style.link}>Calculate</Link></li>
                         <li><Link to={`/info`} className={style.link}>Info</Link></li>
+                        <li><Link to={`/gallery`} className={style.link}>Gallery</Link></li>
                         <li><Link to={`/diagrams`} className={style.link}>Diagrams</Link></li>
                     </ul>
                 </div>

@@ -10,6 +10,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #fcf7f7;
+    scroll-behavior: smooth;
 }
 
 code {
@@ -158,4 +159,19 @@ code {
 
 .button-style:hover::before {
     transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/*gallery*/
+.zoom-gallery {
+    animation: all .5s ease-in-out;
+    animation-name: zoom-modal;
+}
+
+@keyframes zoom-modal {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
